@@ -1,0 +1,22 @@
+{
+  "name": "goldmine-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "jspdf": "^2.5.1",
+    "jspdf-html2canvas": "^1.5.2",
+    "mustache": "^4.2.0",
+    "pdfkit": "^0.14.0",
+    "pdfkit-table": "^0.1.99",
+    "puppeteer": "^22.4.0"
+  }
+}
