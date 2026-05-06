@@ -20,7 +20,7 @@ class FirstPage {
       doc.registerFont('synthese-light-bold', 'fonts/synthese-regular-TRIAL-BF63b781e43e16d.otf');
       const allJsonData = jsonData.analysis_data.slice(0, numberOfRecordsInSummary);
 
-      doc.pipe(fs.createWriteStream(`pdfs/${jsonData?.saleYear}-${jsonData?.saleName}-Lot ${jsonData?.saleLotCode}-Summary.pdf`));
+      doc.pipe(fs.createWriteStream(`pdfs/summary/${jsonData?.saleYear}-${jsonData?.saleName}-Lot ${jsonData?.saleLotCode}-Summary.pdf`));
       const firstItem = allJsonData[0];
 
       const headerData = convertStringsToPascal(firstItem['headerData']);

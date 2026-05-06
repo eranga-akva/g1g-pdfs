@@ -4,6 +4,7 @@ const Mustache = require("mustache");
 const path = require("path");
 const PdfGenerator = require("./services/PdfGenerator");
 const {createDirectoryIfNotExists} = require('./utils/FileUtils');
+const {dataSourceFileName} = require('./constants')
 
 // Create an instance of Express
 const app = express();
@@ -15,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 // Define a route
 app.get('/', async (req, res) => {
   const reqParams = req.query;
-  new PdfGenerator().generatePdf();
+  new PdfGenerator().generatePdf(dataSourceFileName);
   res.send('Files generated!');
 });
 
